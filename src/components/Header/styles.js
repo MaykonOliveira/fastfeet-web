@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   background: #fff;
@@ -52,9 +52,9 @@ export const Profile = styled.div`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLinkStyled = styled(NavLink)`
   font-weight: bold;
-  color: ${props => (props.active ? '#333' : '#a0a0a0')};
+  color: #a0a0a0;
 
   & + a {
     margin-left: 20px;

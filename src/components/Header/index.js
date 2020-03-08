@@ -1,20 +1,30 @@
 import React from 'react';
 
-import { Container, Content, Profile, NavLink } from './styles';
+import { Container, Content, Profile, NavLinkStyled } from './styles';
 import logo from '../../assets/logo.png';
 
 export default function Header() {
+  const activeStyle = {
+    color: '#333',
+  };
+
   return (
     <Container>
       <Content>
         <nav>
           <img src={logo} alt="Fastfeet" />
-          <NavLink to="/orders" active>
+          <NavLinkStyled exact to="/orders" activeStyle={activeStyle}>
             ENCOMENDAS
-          </NavLink>
-          <NavLink to="/orders">ENTREGADORES</NavLink>
-          <NavLink to="/orders">DESTINATÁRIOS</NavLink>
-          <NavLink to="/orders">PROBLEMAS</NavLink>
+          </NavLinkStyled>
+          <NavLinkStyled exact to="/deliverymen" activeStyle={activeStyle}>
+            ENTREGADORES
+          </NavLinkStyled>
+          <NavLinkStyled exact to="/recipients" activeStyle={activeStyle}>
+            DESTINATÁRIOS
+          </NavLinkStyled>
+          <NavLinkStyled exact to="/problems" activeStyle={activeStyle}>
+            PROBLEMAS
+          </NavLinkStyled>
         </nav>
         <aside>
           <Profile>
