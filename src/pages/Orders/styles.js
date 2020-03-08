@@ -67,3 +67,64 @@ export const Search = styled.div`
     }
   }
 `;
+
+export const OrdersTable = styled.section`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+`;
+
+export const TableHeaderField = styled.div`
+  padding: 10px;
+
+  strong {
+    font-size: 15px;
+  }
+`;
+
+export const TableCollumnField = styled.div`
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #fff;
+  margin-bottom: 10px;
+`;
+
+export const DeliverymanField = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+
+  span {
+    margin-left: 4px;
+  }
+`;
+
+export const StatusField = styled.div`
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: ${lighten(0.45, '#42a42d')};
+
+  div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #42a42d;
+    margin: 0 auto;
+  }
+
+  span {
+    color: #42a42d;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+`;

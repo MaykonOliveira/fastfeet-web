@@ -1,7 +1,17 @@
 import React from 'react';
-import { MdSearch, MdAdd, MdMoreHoriz } from 'react-icons/md';
+import { MdSearch, MdAdd } from 'react-icons/md';
 
-import { Container, Search } from './styles';
+import MoreMenu from '../../components/MoreMenu';
+
+import {
+  Container,
+  Search,
+  OrdersTable,
+  TableHeaderField,
+  TableCollumnField,
+  DeliverymanField,
+  StatusField,
+} from './styles';
 
 export default function Orders() {
   return (
@@ -21,41 +31,52 @@ export default function Orders() {
         </button>
       </div>
 
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Destinatário</th>
-          <th>Entregador</th>
-          <th>Cidade</th>
-          <th>Estado</th>
-          <th>Status</th>
-          <th>Ações</th>
-        </tr>
-        <tr>
-          <td>#01</td>
-          <td>Ludwig van Beethoven</td>
-          <td>
+      <OrdersTable>
+        <TableHeaderField>
+          <strong>ID</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Destinatário</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Entregador</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Cidade</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Estado</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Status</strong>
+        </TableHeaderField>
+        <TableHeaderField>
+          <strong>Ações</strong>
+        </TableHeaderField>
+
+        <TableCollumnField>#01</TableCollumnField>
+        <TableCollumnField>Ludwig van Beethoven</TableCollumnField>
+        <TableCollumnField>
+          <DeliverymanField>
             <img
-              src="https://api.adorable.io/avatars/40/john.png"
+              src="https://api.adorable.io/avatars/40/abott@adorable.pngCopy to Clipboard"
               alt="John Doe"
             />
             <span>John Doe</span>
-          </td>
-          <td>Rio do Sul</td>
-          <td>Santa Catarina</td>
-          <td>
-            <div>
-              <div />
-              <span>ENTREGUE</span>
-            </div>
-          </td>
-          <td>
-            <button type="button">
-              <MdMoreHoriz />
-            </button>
-          </td>
-        </tr>
-      </table>
+          </DeliverymanField>
+        </TableCollumnField>
+        <TableCollumnField>Rio do Sul</TableCollumnField>
+        <TableCollumnField>Santa Catarina</TableCollumnField>
+        <TableCollumnField>
+          <StatusField>
+            <div />
+            <span>ENTREGUE</span>
+          </StatusField>
+        </TableCollumnField>
+        <TableCollumnField>
+          <MoreMenu />
+        </TableCollumnField>
+      </OrdersTable>
     </Container>
   );
 }
