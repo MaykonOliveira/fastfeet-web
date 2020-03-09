@@ -39,6 +39,7 @@ export const Profile = styled.div`
     margin-right: 10px;
     strong {
       display: block;
+      font-size: 12px;
       color: rgba(0, 0, 0, 0.7);
     }
     button {
